@@ -26,7 +26,6 @@ export class App extends Component {
     this.setState(prevState => ({
       [name]: prevState[name] + 1,
     }));
-    console.log(name)
   };
 
   render() {
