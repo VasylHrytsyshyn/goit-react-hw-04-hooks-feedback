@@ -21,12 +21,12 @@ export class App extends Component {
     return ((this.state.good / this.countTotalFeedback()) * 100).toFixed(2);
   };
 
-  onLeaveFeedback = event => {
-    const name = event.target.name;
+  onLeaveFeedback = name => {
     this.setState(prevState => ({
       [name]: prevState[name] + 1,
     }));
   };
+  
 
   render() {
     const { good, neutral, bad } = this.state;
